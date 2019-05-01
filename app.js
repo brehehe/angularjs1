@@ -1,6 +1,6 @@
 var app = angular.module('app', ['ngRoute', 'ngAnimate', 'route-segment', 'view-segment']);
 
-app.config(function($routeSegmentProvider, $routeProvider) {
+app.config(function($routeSegmentProvider, $routeProvider, $locationProvider) {
     
     // Configuring provider options
     
@@ -172,7 +172,9 @@ app.config(function($routeSegmentProvider, $routeProvider) {
                 
         
         
-    $routeProvider.otherwise({redirectTo: '/section1'}); 
+    $routeProvider.otherwise({redirectTo: '/section1'});
+    
+    $locationProvider.html5Mode(true);
 }) ;
 
 app.value('loader', {show: false});
