@@ -6,7 +6,7 @@ app.config(function ($routeProvider, $locationProvider) {
                 template: "WELCOME BRO!!"
             })
             .when("/proxy", {
-                templateUrl: 'template/proxy.html',
+                templateUrl: MAINDOMAIN + 'template/proxy.html',
             })
             .when("/banana", {
                 template: "<h1>Banana</h1><p>Bananas contain around 75% water.</p>"
